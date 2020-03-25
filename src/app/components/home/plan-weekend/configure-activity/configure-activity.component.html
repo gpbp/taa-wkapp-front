@@ -1,0 +1,16 @@
+<div>
+    <h3>Third step: add weather constraints</h3>
+    <form [formGroup]="weatherConstraintsForm">
+        <label>
+            The speed of the wind:
+            <input type="text" formControlName="windSpeed">
+        </label>
+        <label>
+            The height of the swell:
+            <input type="text" formControlName="swell">
+          </label>
+        <mat-slide-toggle (toggleChange)="openSnackBar4Rainy(true)" (dragChange)="openSnackBar4Rainy(false)">Rainy</mat-slide-toggle>
+        <mat-slide-toggle (toggleChange)="openSnackBar4Sunny(true)" (dragChange)="openSnackBar4Sunny(false)">Sunny</mat-slide-toggle>
+        <button mat-button (click)="goToChooseActivity()">Next</button>
+    </form>
+</div>

@@ -1,0 +1,22 @@
+<mat-sidenav-container class="example-container">
+    <mat-sidenav #sidenav mode="push" [(opened)]="opened">
+        <mat-action-list>
+            <button mat-list-item (click)="goToPlanWeekend()">Plan your weekend</button> 
+            <button mat-list-item (click)="goToDashboard()">Dashboard</button>
+            <button mat-list-item (click)="goToSettings()">Settings</button>
+        </mat-action-list>
+    </mat-sidenav>
+    <mat-sidenav-content>
+        <mat-toolbar>
+            <button mat-button (click)="openSidenav()">
+                <mat-icon>reorder</mat-icon>    
+            </button>
+            <span>{{content_title}}</span>
+            <span class="fill-remaining-space">
+                <button mat-button (click)="logout()">Log out</button>
+            </span>
+        </mat-toolbar>
+        <router-outlet name="home_outlet"></router-outlet>
+    </mat-sidenav-content>
+</mat-sidenav-container>
+

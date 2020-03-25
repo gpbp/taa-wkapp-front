@@ -1,0 +1,23 @@
+<div>
+    <h3>First step: choose a location</h3>
+    <form [formGroup]="profileForm">
+        <label>
+            Region:
+            <input type="text" formControlName="region">
+        </label>
+        <label>
+            Department:
+            <input type="text" formControlName="department">
+          </label>
+        <label>
+            City:
+            <input type="text" formControlName="city">
+        </label>
+        <label>
+            Postal code:
+            <input type="text" formControlName="postalCode">
+        </label>
+        <button mat-button (click)="goToChooseActivity()">Next</button>
+    </form>
+</div>
+

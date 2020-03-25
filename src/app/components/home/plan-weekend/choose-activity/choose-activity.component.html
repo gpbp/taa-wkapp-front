@@ -1,0 +1,21 @@
+<div>
+    <mat-toolbar>
+        <mat-toolbar-row role="heading">Please choose an activity</mat-toolbar-row>
+    </mat-toolbar>
+    <mat-grid-list cols="5" rowHeight="4:5">
+        <mat-grid-tile *ngFor="let activity of activities">
+            <mat-card class="example-card">
+                <mat-card-header>
+                  <mat-card-title>{{activity.name}}</mat-card-title>
+                </mat-card-header>
+                <img mat-card-image src="https://material.angular.io/assets/img/examples/shiba2.jpg" alt="{{activity.name}}">
+                <mat-card-actions>
+                  <button mat-button matTooltip="Click to choose {{activity.name}} as your favorite activity" (click)="navigateToWeatherConstraint()">
+                      CHOOSE THIS ACTIVITY
+                  </button>
+                </mat-card-actions>
+              </mat-card>  
+        </mat-grid-tile>
+    </mat-grid-list>
+    
+</div>
